@@ -1,0 +1,29 @@
+﻿@model maurizio.conti._5h.PrimoWeb.Models.GuestResponse
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+        <title>Grazie!!</title>
+    </head>
+
+    <body class="text-center"> 
+        <div>
+            <h1>Grazie, @Model.Nome!</h1>
+            @if (Model.Partecipo == true) {
+                @:Ti sei prenotato!! Le bibite sono già in frigo!
+            } 
+            else {
+                @:Mi dispiace che non potrai essere dei nostri. Ti spediremo una mail per il prossimo party. 
+            } 
+        </div>
+    
+        Click <a asp-action="ListaInvitati">qui</a> per visualizzare i partecipanti.
+    </body>
+
+</html>
